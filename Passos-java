@@ -19,18 +19,51 @@ Passos para a criação da api java com banco de dados h2
 
 7.4 anote com @Id o id para dizer que o Id é a chave primaria do objeto 
 
-7.5 anote com @Getters e @Setters
+7.5 anote com @Getter e @Setter
 
 7.6 implements Serializable
 
 7.7 @GeneratedValue(strategy = GenerationType.IDENTITY)
+
 7.8 coloque as configurações em resources/application.properties
 
+7.9 
 
-8 - camada repository
 
-9 - criar service
+8 - camada repositories 
 
-10 - criar controller
+8.1 - cria o package repositories e dentro dele a interface <recurso>Repository extends CrudRepository<classe recurso, Tipo da chave primaria>
+8.2 - Anote a interface como @RepositoryRestResource
+
+
+9 - services
+
+9.1 - criar pacote services e dentro dele a classe <recurso>Services (tudo quanto for de serviços fica aqui, no caso do exemplo essa camada não teve serviço nenhum então ela ficou simples)
+
+9.2 - @Autowired
+      private <interface do repositorio> nome do atributo;
+      
+      metodos: save, findAll...etc
+9.3 - anote a camada como @Service
+
+
+10 - controllers
+
+10.1 - cria o package controllers e dentro dele a classe <recurso>Controller
+
+10.2 - instancie a interface Service e anote ela com @Autowired
+
+10.3 - comece a escrever os metodos de classe utilizando como anotação os verbos http
+
+10.4 anote a classe com @RestController
+@RequestMapping("/<diretorio do projeto>")
+
+
+
+
+
+
+
+
 
 
