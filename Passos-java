@@ -1,0 +1,36 @@
+Passos para a criação da api java com banco de dados h2
+
+1 - Entre no site do spring para iniciar o layout do projeto https://start.spring.io/
+2 - Artifact e Name é o recurso da api
+3 - Packaging é jar para serviço
+4 - Adicione as dependencias: lombok, spring data Jpa, rest repositories, H2 database
+5 - Generate 
+
+6 - Abra o projeto no Intelij e execute mvn clean install (nota - para subir a aplicação no mavem execute mvn spring-boot:run)
+
+
+7 - começar pela camada domains
+
+7.1 criar uma classe com o nome do recurso (singular) {esse cara representa o modelo que fica dentro do banco}
+
+7.2 Cria o id (nesse caso foi Long increment) e cria as outras caracteristicas do modelo
+
+7.3 coloque a anotação @Entity na classe indica que o objeto representa alguma tabela
+
+7.4 anote com @Id o id para dizer que o Id é a chave primaria do objeto 
+
+7.5 anote com @Getters e @Setters
+
+7.6 implements Serializable
+
+7.7 @GeneratedValue(strategy = GenerationType.IDENTITY)
+7.8 coloque as configurações em resources/application.properties
+
+
+8 - camada repository
+
+9 - criar service
+
+10 - criar controller
+
+

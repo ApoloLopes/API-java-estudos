@@ -1,0 +1,5 @@
+Duvidas do projeto Java
+
+1 - As dependencias de projeto (Arquivo POM) serão disponibilizadas? Ou teremos que criar dado os requisitos?
+2 - A anotação @Id indica que o atributo é a chave primaria independentemente do nome da chave? ou só funciona exclusivamente para atributo Id?
+3 - 
